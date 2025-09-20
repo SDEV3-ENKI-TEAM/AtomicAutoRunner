@@ -30,7 +30,7 @@
 2. Agent_VM.bat 실행(localhost:16686에서 트레이스 확인)
 3. 파워쉘에 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process -Force 입력
 4. execute.ps1 파일을 관리자 권한 PowerShell에서 실행: <br>
-<tab> 명령어: & "C:\Users\USERNAME\Desktop\EventAgent\execute.ps1"
+<tab> 명령어: & "C:\Users\USERNAME\Desktop\EventAgent\execute.ps1" -> 실제 execute.ps1 저장 경로로 수정
 5. 실행화면
 
 <img width="1919" height="1048" alt="스크린샷 2025-09-20 124442" src="https://github.com/user-attachments/assets/7ed92a42-cdda-45a9-9d13-6a69739871f4" />
