@@ -11,6 +11,7 @@
 - 관리자 권한 PowerShell에서 개별 테스트 실행
 - Exit code 기준 성공/실패/스킵 기록
 - 마커 파일로 진행 상태 확인
+- 로그 파일로 실행 결과 확인
 - 테스트 목록 파일 기반 순차 실행
 - 임시 스크립트 자동 생성 및 삭제
 
@@ -34,4 +35,11 @@
 5. 실행화면
 
 <img width="1919" height="1048" alt="스크린샷 2025-09-20 124442" src="https://github.com/user-attachments/assets/7ed92a42-cdda-45a9-9d13-6a69739871f4" />
-6. 모든 테스트가 완료되면 마커 폴더를 확인하여 결과 확인 가능
+6. 모든 테스트가 완료되면 마커, 로그 폴더를 확인하여 결과 확인 가능
+
+## 레지스트리 편집 설정
+<img width="1656" height="906" alt="스크린샷 2025-09-22 094344" src="https://github.com/user-attachments/assets/65c6732d-5f27-474e-acc3-ae05695fba7b" />
+위와 같이 레지스트리 편집이 막혀있을 경우 파워쉘에 <br>
+New-Item -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\System" -Force | Out-Null <br>
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\System" -Name "DisableRegistryTools" -Value 0 -Type DWord -Force <br>
+입력하여 레지스트리 편집 허용 설정이 필요
